@@ -84,17 +84,26 @@
 }
 .ex-10-icon {
     font-size: 60px;
-    transition: transform 0.4s ease-in-out;
-    animation:  2s linear infinite;
+    animation: rotate 2s linear infinite;
 }
-.ex-10-icon:hover{
-   transform: rotate(360deg);
-   
-        
-    }
+@keyframes rotate {
+    from: {transform: rotate(0deg);}
+    to { transform: rotate(350deg);}
 }
+    
 .ex-11-icon {
     font-size: 60px;
+    animation: casual 2 timing-function delay iteration-count linear forwards fill-mode;;
+}
+.ex-11-icon:hover{
+    animation: casual 2s linear forwards ;
+}
+@keyframes casual {
+    0% {transform: rotate(0deg);}
+    75%{transform: rotate(270deg);}
+    100%{transform: rotate(0deg);}
+
+
 }
 .ex-12-button, .ex-13-button {
     position: relative;
@@ -125,3 +134,33 @@
     width: 60px;
     height: 20px;
 }
+.ex-12-top-white{
+    animation: button-animation 2s linear infinite;
+}
+.ex-12-bottom-white{
+    animation: button-animation-close 2s linear infinite;
+}
+@keyframes button-animation {
+    0%{left: 10%;}
+    50%{left: 60%;}
+    100%{ left: 10% }
+    
+}
+@keyframes buttom-animation-close {
+    0% { right: 10%;}
+    50%{ right: 60% ;}
+    100%{right: 100%;}  
+}
+
+.ex-13-top-white .ex-13-bottom-white{
+    animation: button-rotation 4s linear infinite;
+}
+.ex-13-bottom-white{
+    animation: button-rotation 4 s linear infinite;
+}
+@keyframes button-rotation { 
+    0%{left: 10%;}
+    50%{left: 50%;}
+    100%{ left: 100% }
+}
+
