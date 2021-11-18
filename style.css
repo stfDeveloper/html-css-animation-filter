@@ -134,33 +134,77 @@
     width: 60px;
     height: 20px;
 }
-.ex-12-top-white{
-    animation: button-animation 2s linear infinite;
-}
-.ex-12-bottom-white{
-    animation: button-animation-close 2s linear infinite;
+.ex-12-button:hover .ex-12-top-white {
+    animation: button-animation 2s linear;
 }
 @keyframes button-animation {
-    0%{left: 10%;}
-    50%{left: 60%;}
-    100%{ left: 10% }
-    
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
 }
-@keyframes buttom-animation-close {
-    0% { right: 10%;}
-    50%{ right: 60% ;}
-    100%{right: 100%;}  
+.ex-13-button:hover .ex-13-top-white {
+    animation: button-rotation 2s linear;
+}
+@keyframes button-rotation {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: button-rotation-bottom 2s linear;
+}
+@keyframes button-rotation-bottom {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
 }
 
-.ex-13-top-white .ex-13-bottom-white{
-    animation: button-rotation 4s linear infinite;
-}
-.ex-13-bottom-white{
-    animation: button-rotation 4 s linear infinite;
-}
-@keyframes button-rotation {  
-    0%{left: 10%;}
-    50%{left: 50%;}
-    100%{ left: 100% } 
-}
 
